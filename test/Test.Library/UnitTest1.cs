@@ -19,7 +19,7 @@ namespace Test.Library
         public void Health()
         {
             bool input = Health>100;
-            bool expected = Health.==100;
+            bool expected = Health==100;
             bool output = Health==100;
             Assert.AreEqual(output, expected);
         }
