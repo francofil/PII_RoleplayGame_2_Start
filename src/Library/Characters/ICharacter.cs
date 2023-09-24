@@ -1,6 +1,6 @@
 namespace RoleplayGame
 {
-    public interface Character
+    public interface ICharacter
     {
        public void ReceiveAttack(int power);
 
