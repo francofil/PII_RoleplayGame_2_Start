@@ -5,9 +5,9 @@ namespace RoleplayGame
     {
         public interface IItemDefense
         {
-            int DefenseValue { get; }
+            int GetDefenseValue();
         }
-        
+
         public int DefenseValue()
         {
             {
