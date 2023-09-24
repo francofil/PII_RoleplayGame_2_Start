@@ -1,6 +1,6 @@
 namespace RoleplayGame
 {
-    public interface IItemDefese
+    public interface IItemDefense
     {
        public void DefenseValue();
     }
