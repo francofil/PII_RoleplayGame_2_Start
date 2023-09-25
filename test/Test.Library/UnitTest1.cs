@@ -1,4 +1,6 @@
 using System.Reflection.PortableExecutable;
+using System;
+namespace RoleplayGame;
 using NUnit.Framework;
 
 
@@ -21,9 +23,9 @@ namespace Test.Library
         public void Health()
         {
             Dwarf gimli = new Dwarf("Gimli");
-            bool input = 100;
-            bool expected = Health==100;
-            bool output = Health==100;
+            bool input = gimli.Health == 100;
+            bool expected = gimli.Health == 100;
+            bool output = gimli.Health == 100;
             Assert.AreEqual(output, expected);
             
         }
