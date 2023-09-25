@@ -74,7 +74,27 @@ namespace Test.Library
             Assert.IsTrue(attackValue > 0, "AttackValue should return a positive value.");
         }
 
+         [Test]
+        public void AttackValue_ReturnsPositiveValue5()
+        {
+            
+            IItemAtack Staff = new Staff(); 
+            
+            int attackValue = Staff.AttackValue();
 
+            Assert.IsTrue(attackValue > 0, "AttackValue should return a positive value.");
+        }
+
+         [Test]
+        public void AttackValue_ReturnsPositiveValue6()
+        {
+            
+            IItemAtack Sword = new Sword(); 
+            
+            int attackValue = Sword.AttackValue();
+
+            Assert.IsTrue(attackValue > 0, "AttackValue should return a positive value.");
+        }
 
         [Test]
         public void DefenseValue_ReturnsNonNegativeValue1()
