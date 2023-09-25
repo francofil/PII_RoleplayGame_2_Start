@@ -1,13 +1,20 @@
 namespace RoleplayGame
 {
-    public class Helmet
+    public class Helmet : IItemDefense
     {
-        public int DefenseValue
+        public interface IItemDefense
         {
-            get
+            int GetDefenseValue();
+        }
+        public int DefenseValue()
+        {
+            
             {
                 return 18;
             }
         }
     }
 }
+
+
+      

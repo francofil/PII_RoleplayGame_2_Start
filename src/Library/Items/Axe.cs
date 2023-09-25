@@ -1,13 +1,19 @@
 namespace RoleplayGame
 {
-    public class Axe
+    public class Axe : IItemAtack
     {
-        public int AttackValue 
+        public interface IItemAtack
         {
-            get
+        public void AttackValue();
+        }
+
+        public int AttackValue() 
+        {
+            
             {
                 return 25;
             } 
         }
     }
 }
+        

@@ -2,13 +2,23 @@ using System.Collections.Generic;
 
 namespace RoleplayGame
 {
-    public class SpellsBook
+    public class SpellsBook : IItemAtack, IItemDefense
     {
         public Spell[] Spells { get; set; }
-        
-        public int AttackValue
+
+        public interface IItemAtack
         {
-            get
+        public void AttackValue();
+        }
+        
+         public interface IItemDefense
+        {
+        public int DefenseValue();
+        }
+
+        public int AttackValue()
+        {
+            
             {
                 int value = 0;
                 foreach (Spell spell in this.Spells)
@@ -19,9 +29,9 @@ namespace RoleplayGame
             }
         }
 
-        public int DefenseValue
+        public int DefenseValue()
         {
-            get
+            
             {
                 int value = 0;
                 foreach (Spell spell in this.Spells)

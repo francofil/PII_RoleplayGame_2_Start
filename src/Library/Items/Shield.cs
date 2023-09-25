@@ -1,10 +1,15 @@
 namespace RoleplayGame
 {
-    public class Shield
+    public class Shield : IItemDefense
     {
-        public int DefenseValue
+        public interface IItemDefense
         {
-            get
+            int GetDefenseValue();
+        }
+
+        public int DefenseValue()
+        {
+            
             {
                 return 14;
             }

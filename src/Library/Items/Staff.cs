@@ -1,18 +1,28 @@
 namespace RoleplayGame
 {
-    public class Staff
+    public class Staff : IItemAtack, IItemDefense
     {
-        public int AttackValue 
+        public interface IItemAtack
         {
-            get
+        public void AttackValue();
+        }
+
+        public int AttackValue() 
+        {
+            
             {
                 return 100;
             } 
         }
 
-        public int DefenseValue
+        public interface IItemDefense
         {
-            get
+            int GetDefenseValue();
+        }
+
+        public int DefenseValue()
+        {
+            
             {
                 return 100;
             }

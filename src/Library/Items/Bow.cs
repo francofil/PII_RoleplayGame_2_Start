@@ -1,13 +1,18 @@
 namespace RoleplayGame
 {
-    public class Bow
+    public class Bow : IItemAtack
     {
-        public int AttackValue 
+        public interface IItemAtack
         {
-            get
+        public void AttackValue();
+        }
+        public int AttackValue() 
+        {
+            
             {
                 return 15;
             } 
         }
     }
 }
+
