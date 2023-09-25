@@ -1,7 +1,7 @@
 using System.Reflection.PortableExecutable;
 using System;
 using NUnit.Framework;
-using RoleplayGame; // Añade el espacio de nombres necesario aquí
+using RoleplayGame;
 
 namespace Test.Library
 {
@@ -27,6 +27,53 @@ namespace Test.Library
             bool output = gimli.Health == 100;
             Assert.That(output, Is.EqualTo(expected)); 
         }
+
+
+        [Test]
+        public void AttackValue_ReturnsPositiveValue1()
+        {
+            
+            IItemAtack Axe = new Axe(); 
+            
+            int attackValue = Axe.AttackValue();
+
+            Assert.IsTrue(attackValue > 0, "AttackValue should return a positive value.");
+        }
+
+        [Test]
+        public void AttackValue_ReturnsPositiveValue2()
+        {
+            
+            IItemAtack Bow = new Bow(); 
+            
+            int attackValue = Bow.AttackValue();
+
+            Assert.IsTrue(attackValue > 0, "AttackValue should return a positive value.");
+        }
+
+
+        [Test]
+        public void AttackValue_ReturnsPositiveValue3()
+        {
+            
+            IItemAtack Spell = new Spell(); 
+            
+            int attackValue = Spell.AttackValue();
+
+            Assert.IsTrue(attackValue > 0, "AttackValue should return a positive value.");
+        }
+
+        [Test]
+        public void AttackValue_ReturnsPositiveValue4()
+        {
+            
+            IItemAtack SpellsBook = new SpellsBook(); 
+            
+            int attackValue = SpellsBook.AttackValue();
+
+            Assert.IsTrue(attackValue > 0, "AttackValue should return a positive value.");
+        }
+
 
 
         [Test]
