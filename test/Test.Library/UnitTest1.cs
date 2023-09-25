@@ -1,8 +1,7 @@
 using System.Reflection.PortableExecutable;
 using System;
-namespace RoleplayGame;
 using NUnit.Framework;
-
+using RoleplayGame; // Añade el espacio de nombres necesario aquí
 
 namespace Test.Library
 {
@@ -26,19 +25,19 @@ namespace Test.Library
             bool input = gimli.Health == 100;
             bool expected = gimli.Health == 100;
             bool output = gimli.Health == 100;
-            Assert.AreEqual(output, expected);
+            Assert.That(output, Is.EqualTo(expected));
             
         }
+
+
         [Test]
         public void DefenseValue_ReturnsNonNegativeValue()
         {
-            // Arrange
-            Item item = new Item(); // Reemplaza 'Item' con tu implementación real si es necesario.
+            
+            Armor item = new Armor(); 
 
-            // Act
             int defenseValue = item.DefenseValue();
 
-            // Assert
             Assert.IsTrue(defenseValue >= 0, "DefenseValue should return a non-negative value.");
         }
     }

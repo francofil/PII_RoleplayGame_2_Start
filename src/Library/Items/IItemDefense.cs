@@ -6,5 +6,4 @@ namespace RoleplayGame
     {
        public int DefenseValue();
     }
-
 }
